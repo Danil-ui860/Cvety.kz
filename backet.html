@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="main.css">
+        <title>Document</title>
+    </head>
+    <body>
+        <div class="all-items">
+            <header>
+                <div class="header">
+                    <div>
+                        <a href="main.html">
+                            <img class="logo" src="img/logo.svg" alt="Цветы.КЗ">
+                        </a>
+                    </div>
+                    <div>
+                        <img class="icon-phone" src="img/phone-green.svg" alt="Цветы.КЗ">
+                        <a href="tel:77773213321">
+                            <span class="number">+7(777) 321-33-21</span>
+                        </a>
+                    </div>
+                </div>
+                <nav class="menu">
+                    <div class="search">
+                        <img src="img/search-white.svg" alt="Поиск">
+                        <input class="input-search" type="search" value="Поиск">
+                    </div>
+                    <div class="user-menu">
+                        <a href="contact.html">
+                            <img src="img/contacts.svg" alt="Контакты">
+                        </a>
+                        <!-- <a href="backet.html">
+                            <img src="img/backet-white.svg" alt="Корзина">
+                        </a> -->
+                        <a href="backet.html">
+                            <img src="img/heart-white.svg" alt="Избранное">
+                        </a>
+                        <a href="user.html">
+                            <img src="img/user-white.svg" alt="Личный кабинет">
+                        </a>
+                    </div>
+                </nav>
+            </header>
+            <main>
+                <div class="flex-div">
+                    <div class="slider">
+                        <div class="slides">
+                            <div class="slide"><img src="img/3-2.webp" alt="Slide 1"></div>
+                            <div class="slide"><img src="img/3-3.webp" alt="Slide 2"></div>
+                            <div class="slide"><img src="img/3.webp" alt="Slide 3"></div>
+                        </div>
+                        <button class="prev">&#10094;</button>
+                        <button class="next">&#10095;</button>
+                    </div>
+                    <div class="infoo">
+                        <p>
+                        <span class="first-word">
+                            Теона
+                        </span> 
+                        <span class="rest-text">
+                            — яркая, насыщенная роза с тонкими лепестками кораллово-оранжевыми и красными оттенками. Куст среднерослый, высотой 80–100 см. Лепестки плотно собраны в классический бутон чайно-гибридной розы. Цветок среднего размера, в диаметре может достигать 9–11 см. Листва тёмно-зелёная, изящная.
+                        </span>
+                        </p>
+                    </div> 
+                    </div>
+                    <div class="flex-column">
+                    <div class="flex">
+                        <p>Букет «Теона»</p>
+                        <img class="icon-favorite" src="img/heart-red.svg" alt="Избранное">
+                    </div>
+                    <div class="volume">Выберите объем букета</div>
+                    <!-- <div class="selector"> -->
+                        <select name="1-роза" id="defs">
+                            <option value="1">1-роза</option>
+                            <option value="2">2-роза</option>
+                            <option value="3">3-роза</option>
+                        </select>
+                        <div class="description">
+                            ОПИСАНИЕ
+                        </div>
+                        <div class="description_info">
+                            40 - 50 см высота
+                        </div>
+                        <div class="description_info">
+                            25 - 30 см диаметр
+                        </div>
+                        <div class="description_info">
+                            2кг - 5кг вес
+                        </div>
+                        <div class="buy-card_and">
+                            <div> <div style="width: auto;" class="card-buy_and">
+                                <a href="#">купить</a>
+                            </div>
+                        </div>
+                           
+                            <div class="cirkle_flex">
+                                 <div class="cirkle">
+                                    <span>
+                                        -
+                                    </span>
+                                </div>
+                                 <div class="square">
+                                    <span>
+                                        1
+                                    </span>
+                                </div>
+                                 <div class="cirkle">
+                                    <span>
+                                        +
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="total">
+                                цена 5000 тг
+                            </div>
+                        </div>
+                        <div class="display-flex">
+                         <img class="visaaa" src="img/visa-logo-.svg" alt="Оплата">
+                         <img style="width: auto; height: 50px;" src="img/mastercard-com.svg" alt="Оплата">
+                        </div>
+                
+                   </div>
+            </main>
+            <footer> 
+                <div class="bottom-content">
+                <div class="bottom-logo">
+                    <a href="main.html"><img src="img/logo-white.svg" alt="Цветы.КЗ"></a>
+                </div>
+                <div class="info">
+                    <div> <img class="location-white" src="img/location-white.svg" alt="Локация">
+                        <span>Казахстан, город Алматы, Алмалинский район, улица Ауэзова, дом 5, н.п. 173, почтовый индекс 050000</span>
+                    </div>
+                </div>
+                <div class="visit-card">
+                    <img src="img/mastercard-white.svg" alt="оплата">
+                    <img src="img/visa-white.svg" alt="оплата">
+                </div>
+                </div>
+            
+        </footer>
+        </div>
+        <script>
+            const slides = document.querySelector('.slides');
+            const prev = document.querySelector('.prev');
+            const next = document.querySelector('.next');
+            let index = 0;
+        
+            function showSlide(i) {
+                index = (i + slides.children.length) % slides.children.length;
+                slides.style.transform = `translateX(${-index * 100}%)`;
+            }
+        
+            prev.addEventListener('click', () => showSlide(index - 1));
+            next.addEventListener('click', () => showSlide(index + 1));
+            let startX = 0;
+            let endX = 0;
+        
+            slides.addEventListener('touchstart', (e) => {
+                startX = e.touches[0].clientX;
+            });
+        
+            slides.addEventListener('touchmove', (e) => {
+                endX = e.touches[0].clientX;
+            });
+        
+            slides.addEventListener('touchend', () => {
+                if (startX - endX > 50) {
+                    showSlide(index + 1);
+                } else if (endX - startX > 50) {
+                    showSlide(index - 1);
+                }
+            });
+        </script>
+    </body>
+</html>
