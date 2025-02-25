@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="main.css">
+        <title>Document</title>
+    </head>
+    <body>
+        <div class="all-items">
+            <header>
+                <div class="header">
+                    <div>
+                        <a href="index.html">
+                            <img class="logo" src="img/logo.svg" alt="Цветы.КЗ">
+                        </a>
+                    </div>
+                    <div>
+                        <img class="icon-phone" src="img/phone-green.svg" alt="Цветы.КЗ">
+                        <a href="tel:77773213321">
+                            <span class="number">+7(777) 321-33-21</span>
+                        </a>
+                    </div>
+                </div>
+                <nav class="menu">
+                    <div class="search">
+                        <img src="img/search-white.svg" alt="Поиск">
+                        <input class="input-search" type="search" value="Поиск">
+                    </div>
+                    <div class="user-menu">
+                        <a href="contact.html">
+                            <img src="img/contacts.svg" alt="Контакты">
+                        </a>
+                        <!-- <a href="backet.html">
+                            <img src="img/backet-white.svg" alt="Корзина">
+                        </a> -->
+                        <a href="backet.html">
+                            <img src="img/heart-white.svg" alt="Избранное">
+                        </a>
+                        <a href="user.html">
+                            <img src="img/user-white.svg" alt="Личный кабинет">
+                        </a>
+                    </div>
+                </nav>
+            </header>
+            <main style="padding: 10px;">
+                <div style="display: flex; flex-direction: column; width: 100%; max-width: 400px;justify-content: center;
+            align-items: center;margin: 0 auto;">
+<div class="tabs">
+    <button class="tab-button active" data-tab="tab1">Вход</button>
+    <button class="tab-button" data-tab="tab2">Регистрация</button>
+</div>
+
+<div class="tab-content active" id="tab1">
+    <div class="container">
+        <h2>Вход</h2>
+        <input type="text" placeholder="Имя" required>
+        <input type="password" placeholder="Пароль" required>
+        <button>войти</button>
+        <a class="aaa" href="main.html"><button>На главную</button></a>
+    </div>
+</div>
+<div class="tab-content" id="tab2">
+    <div class="container">
+        <h2>Регистрация</h2>
+        <input type="text" placeholder="Имя" required>
+        <input type="email" placeholder="Email" required>
+        <input type="password" placeholder="Пароль" required>
+        <button>Зарегистрироваться</button>
+        <a class="aaa" href="main.html"><button>На главную</button></a>
+    </div>
+</div>
+       </main>
+            <footer> 
+                <div class="bottom-content">
+                <div class="bottom-logo">
+                    <img src="img/logo-white.svg" alt="Цветы.КЗ">
+                </div>
+                <div class="info">
+                    <div> <img class="location-white" src="img/location-white.svg" alt="Локация">
+                        <span>Казахстан, город Алматы, Алмалинский район, улица Ауэзова, дом 5, н.п. 173, почтовый индекс 050000</span>
+                    </div>
+                </div>
+                <div class="visit-card">
+                    <img src="img/mastercard-white.svg" alt="оплата">
+                    <img src="img/visa-white.svg" alt="оплата">
+                </div>
+                </div>
+        </footer>
+        </div>
+        <script>
+            document.addEventListener("DOMContentLoaded", () => {
+            const tabButtons = document.querySelectorAll(".tab-button");
+            const tabContents = document.querySelectorAll(".tab-content");
+        
+            tabButtons.forEach(button => {
+                button.addEventListener("click", () => {
+                    // Убираем активный класс у всех кнопок и контента
+                    tabButtons.forEach(btn => btn.classList.remove("active"));
+                    tabContents.forEach(content => content.classList.remove("active"));
+        
+                    // Добавляем активный класс для выбранной вкладки
+                    button.classList.add("active");
+                    document.getElementById(button.dataset.tab).classList.add("active");
+                });
+            });
+        });
+        
+        </script>
+    </body>
+</html>

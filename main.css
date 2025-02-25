@@ -516,7 +516,96 @@ select {
   font-family: SegoeUI-SemiBold, Tahoma, Geneva, Verdana, sans-serif;
 
 }
-/* медиа запросы  */
+.container {
+  width: auto;
+  max-width: 400px;
+  padding: 20px;
+  background-color: #fff;
+  border: 2px solid #df644e;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h2 {
+  color: #df644e;
+  margin-bottom: 20px;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #df644e;
+  border-radius: 5px;
+  outline: none;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  background-color: #df644e;
+  color: rgb(0, 0, 0);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 5px;
+}
+
+button:hover {
+  background-color: #c7533f;
+}
+.aaa {
+  text-decoration: none;
+  display: inline-block;
+  width: 100%;
+  cursor: pointer;
+}
+.tab-content {
+  width: 100%;
+  max-width: 400px;
+}
+/* Контейнер табов */
+.tabs {
+display: flex;
+gap: 10px;
+margin-bottom: 10px;
+width: auto;
+max-width: 400px;
+justify-content: space-evenly;
+padding: 20px;
+
+}
+
+/* Кнопки табов */
+.tab-button {
+padding: 10px 20px;
+cursor: pointer;
+border: 1px solid #ccc;
+background-color: #f1f1f1;
+border-radius: 5px;
+transition: 0.3s;
+width: auto;
+}
+
+.tab-button.active {
+background-color: #7095bc;
+color: white;
+border-color: #007bff;
+}
+
+/* Контент табов */
+.tab-content {
+display: none;
+padding: 0;
+}
+
+.tab-content.active {
+display: block;
+}
+
 @media (max-width: 600px) {
   .prev, .next {
       padding: 5px;
