@@ -516,6 +516,7 @@ select {
   font-family: SegoeUI-SemiBold, Tahoma, Geneva, Verdana, sans-serif;
 
 }
+/* медиа запросы  */
 @media (max-width: 600px) {
   .prev, .next {
       padding: 5px;
